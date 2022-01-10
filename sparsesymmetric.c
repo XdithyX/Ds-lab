@@ -55,6 +55,23 @@ void transpose(struct matrix m[],struct matrix res[])
             }
            }
           }  
+  int symmetry(struct matrix m[], struct matrix res[])
+  { 
+  int flag =1,i;
+  if(m[0].val==res[0].val){
+     for(i=1;i<res[0].val+1;i++){
+     
+          if(m[i].row!=res[i].row||m[i].col!=res[i].col||m[i].val!=res[i].val)
+          { flag=0;
+          break;
+          }
+          }
+}
+else
+flag=0;
+return flag;
+}
+          
             
 int main(){
 	
@@ -65,6 +82,10 @@ int main(){
 	printMatrix(m);
 	transpose(m,res);
 	printMatrix(res);
+	if (symmetry(m,res))
+	printf("symmetric\n");
+	else
+	printf("not symmetric\n");
 	
 }
 
