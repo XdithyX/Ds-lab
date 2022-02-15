@@ -41,6 +41,7 @@ void addele()
    newnode->data=y;
    newnode->next=t->next;
    t->next=newnode;
+   break;
   }
   else
   t=t->next;
